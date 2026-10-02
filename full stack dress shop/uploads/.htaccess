@@ -1,0 +1,8 @@
+# Security: Prevent PHP execution inside the uploads directory
+<FilesMatch "\.php$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# Allow direct access to images only
+Options -Indexes
